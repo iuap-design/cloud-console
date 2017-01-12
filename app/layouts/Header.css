@@ -1,10 +1,11 @@
 .header {
-  background-color: blue;
+  position: fixed;
+  top: 0;
   width: 100%;
-  font-size: 18px;
+  min-width: 960px;
+  background-color: #2a4795;
+  height: 50px;
   color: #fff;
+  z-index: 999;
   margin: 0;
-  padding: 0 10px;
-  height: 48px;
-  line-height: 48px;
 }

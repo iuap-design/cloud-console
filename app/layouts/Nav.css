@@ -1,0 +1,19 @@
+.side-box {
+  position: fixed;
+  z-index: 2;
+  float: left;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #d0daf3;
+  -webkit-transition: width 0.4s;
+  -moz-transition: width 0.4s;
+  -ms-transition: width 0.4s;
+  -o-transition: width 0.4s;
+  transition: width 0.4s;
+  -moz-transition: width .4s;
+  -webkit-transition: width .4s;
+  transition: width .4s;
+}
