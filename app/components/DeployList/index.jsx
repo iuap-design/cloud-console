@@ -1,6 +1,6 @@
 import React from 'react';
 
-require('./indx.css');
+import styles from './indx.css';
 
 export default class App extends React.Component {
   constructor(props) {

@@ -1,9 +1,11 @@
 import React from 'react'
 import { Row, Col } from 'tinper-bee'
 
-import Header from './Header'
-import Nav from './Nav'
-import Breadcrumb from './Breadcrumb'
+import Header from '../Header'
+import Nav from '../Nav'
+import Breadcrumb from '../Breadcrumb'
+
+import styles from './index.css'
 
 export default ( props ) => (
   <div>
@@ -15,13 +17,12 @@ export default ( props ) => (
           <Nav />
         </Col>
         <Col md={10}  xs={10} sm={10}>
-          <div style={{ marginTop: "50px"}}>
+          <div className={ styles.main }>
             <Breadcrumb />
-            <div style={{  backgroundColor: "#e3e8f7" }}>
+            <div className={ styles.container } >
               { props.children }
             </div>
           </div>
-
         </Col>
     </Row>
   </div>
