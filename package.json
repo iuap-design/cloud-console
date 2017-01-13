@@ -4,8 +4,6 @@
   "description": "react babel webpack boilerplate",
   "main": "app/main.jsx",
   "scripts": {
-    "precommit": "npm run lint",
-    "commitmsg": "npm run lint:msg",
     "lint": "eslint 'app/**/*.@(js|jsx)'",
     "lint:msg": "validate-commit-msg",
     "build": "webpack",

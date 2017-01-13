@@ -84,7 +84,7 @@ class SideNav extends Component {
                       <Menu.Item key="4">配额管理</Menu.Item>
                   </SubMenu>
                   <SubMenu key="sub2" title={<span>BAE 基础班</span>}>
-                      <Menu.Item key="5">部署列表</Menu.Item>
+                      <Menu.Item key="5"><a href="#list">部署列表</a></Menu.Item>
                       <Menu.Item key="6">扩展服务</Menu.Item>
                       <Menu.Item key="7">自动测试</Menu.Item>
                       <Menu.Item key="8">配额管理</Menu.Item>
