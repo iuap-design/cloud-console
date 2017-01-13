@@ -1,6 +1,14 @@
 .main {
-  margin-top: 50px;
+  /*margin-top: 50px;*/
 }
 .container {
-  background-color: "#e3e8f7";
+  background-color: #e3e8f7;
+  padding-left: 0;
+  padding-top: 0;
+  height: 100%;
+}
+.content {
+  background-color: #fff;
+  padding: 15px;
+  font-size: 16px;
 }
