@@ -14,7 +14,7 @@ export default ( props ) => (
           <ConsoleHeader />
         </Col>
         <Col
-          style={{ backgroundColor: "#c7d5f2", height: "100%" }}
+          style={{ backgroundColor: "#c7d5f2", height: "100%",paddingRight:0 }}
           md={2} xs={2} sm={2} >
           <SideNav />
         </Col>

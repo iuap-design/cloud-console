@@ -56,16 +56,16 @@ class ConsoleHeader extends Component {
 		                    管理控制台
 		                  </Menu.Item>
                       <SubMenu key="1.3" title={<span>产品服务<Icon type="uf-arrow-down"></Icon></span>}>
-                          <Menu.Item key="setting:1">Option 1</Menu.Item>
-                          <Menu.Item key="setting:2">Option 2</Menu.Item>
-                          <Menu.Item key="setting:3">Option 3</Menu.Item>
-                          <Menu.Item key="setting:4">Option 4</Menu.Item>
+                          <Menu.Item key="setting:1.3.1">Option 1</Menu.Item>
+                          <Menu.Item key="setting:1.3.2">Option 2</Menu.Item>
+                          <Menu.Item key="setting:1.3.3">Option 3</Menu.Item>
+                          <Menu.Item key="setting:1.3.4">Option 4</Menu.Item>
                       </SubMenu>
                       <SubMenu key="1.4" title={<span>文档与工具<Icon type="uf-arrow-down"></Icon></span>}>
-                          <Menu.Item key="setting:1">Option 1</Menu.Item>
-                          <Menu.Item key="setting:2">Option 2</Menu.Item>
-                          <Menu.Item key="setting:3">Option 3</Menu.Item>
-                          <Menu.Item key="setting:4">Option 4</Menu.Item>
+                          <Menu.Item key="setting:1.4.1">Option 1</Menu.Item>
+                          <Menu.Item key="setting:1.4.2">Option 2</Menu.Item>
+                          <Menu.Item key="setting:1.4.3">Option 3</Menu.Item>
+                          <Menu.Item key="setting:1.4.4">Option 4</Menu.Item>
                       </SubMenu>
                     </Menu>
                 </Nav>
