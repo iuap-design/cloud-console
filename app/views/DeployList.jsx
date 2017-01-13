@@ -1,6 +1,6 @@
 import React from 'react'
-import {Button,InputGroup,Dropdown,FormControl,Menu} from 'tinper-bee'
-
+import {Button,InputGroup,Dropdown,FormControl} from 'tinper-bee'
+import Menu, { Item as MenuItem, Divider, SubMenu, MenuItemGroup } from 'bee-menu';
 
 function onSelect({ key }) {
     console.log(`${key} selected`);
@@ -10,18 +10,19 @@ function onSelect({ key }) {
 function onVisibleChange(visible) {
     console.log(visible);
 }
-const MenuItem = Menu.MenuItem;
+
 const menu1 = (
-    <Menu
-        multiple
-        onSelect={onSelect}>
-        <MenuItem key="1">借款合同</MenuItem>
-        <MenuItem key="2">抵/质押合同</MenuItem>
-        <MenuItem key="3">担保合同</MenuItem>
-        <MenuItem key="4">联保合同</MenuItem>
-        <MenuItem key="5">合同审批</MenuItem>
-        <MenuItem key="6">抵/质押合同跟踪</MenuItem>
-    </Menu>
+ <Menu
+   multiple
+   onSelect={onSelect}>
+   <MenuItem key="1">借款合同</MenuItem>
+   <MenuItem key="2">抵/质押合同</MenuItem>
+   <MenuItem key="3">担保合同</MenuItem>
+   <MenuItem key="4">联保合同</MenuItem>
+   <Divider />
+   <MenuItem key="5">合同审批</MenuItem>
+   <MenuItem key="6">抵/质押合同跟踪</MenuItem>
+ </Menu>
 );
 
 export default (props) => (
@@ -36,27 +37,32 @@ export default (props) => (
             <div className="filter-wrap">
                 <InputGroup>
                     <InputGroup.Button shape="border">
-                        <Dropdown trigger={['click']} overlay={menu1} animation="slide-up" onVisibleChange={onVisibleChange}>
-                            <Button shape="border">域名<span className="uf uf-arrow-down"> </span></Button>
-                        </Dropdown>
+                        <Dropdown
+                           trigger={['click']}
+                           overlay={menu1}
+                           animation="slide-up"
+                           onVisibleChange={onVisibleChange}
+                         >
+                           <Button shape="border">域名 <span className="uf uf-arrow-down"> </span></Button>
+                         </Dropdown>
                     </InputGroup.Button>
                     <FormControl type="text" />
-                    <InputGroup.Button>
-                        <Button><span className="uf uf-search"> </span></Button>
-                    </InputGroup.Button>
+                    <InputGroup.Addon>
+                        <span className="uf uf-search"> </span>
+                    </InputGroup.Addon>
                 </InputGroup>
             </div>
         </div>
         <div className="buttons-wrap">
             <Button size="sm" colors="primary" >+ 添加部署</Button>
             <Button size="sm" colors="primary" >+ 部署微信公众号</Button>
-            <Button size="sm" disabled >休眠</Button>
-            <Button size="sm" disabled >开启</Button>
-            <Button size="sm" disabled >删除</Button>
+            <Button size="sm" disabled shape="border">休眠</Button>
+            <Button size="sm" disabled shape="border">开启</Button>
+            <Button size="sm" disabled shape="border">删除</Button>
 
             <div className="buttons-right">
-                <Button size="sm" className="uf uf-settings"></Button>
-                <Button size="sm" className="uf uf-sync-c-o"></Button>
+                <Button size="sm" shape="border"><span className="uf uf-settings"></span></Button>
+                <Button size="sm" shape="border"><span className="uf uf-sync-c-o"></span></Button>
             </div>
         </div>
         <div>

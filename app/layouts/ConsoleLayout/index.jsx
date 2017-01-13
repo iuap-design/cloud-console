@@ -15,12 +15,12 @@ export default ( props ) => (
         </Col>
         <Col
           style={{ backgroundColor: "#c7d5f2", height: "100%" }}
-          md={1} xs={2} sm={2} >
+          md={2} xs={2} sm={2} >
           <SideNav />
         </Col>
         <Col
           className="container"
-          md={11}
+          md={10}
           xs={10}
           sm={10} >
           <div className="main">

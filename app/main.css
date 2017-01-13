@@ -1,7 +1,4 @@
 
-#app .u-button {
-	margin:0 5px;
-}
 #app .hint {
 	float: left;
 	background: #f5f5f5;
@@ -51,4 +48,11 @@
 }
 .buttons-right {
 	float:right;
+}
+#app .filter-wrap{
+	width: 500px;
+    float: right;
+}
+#app .buttons-wrap .u-button{
+	margin-left: 5px;
 }

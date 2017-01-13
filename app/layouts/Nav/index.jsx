@@ -74,7 +74,6 @@ class SideNav extends Component {
                 mode="inline"
                 openKeys={this.state.openKeys}
                 selectedKeys={[this.state.current]}
-                style={{ width: 180, paddingRight: "20px" }}
                 onOpenChange={this.onOpenChange.bind(this)}
                 onClick={this.handleClick.bind(this)} >
                   <SubMenu key="sub1" title={<span>BAE 专业版</span>}>
