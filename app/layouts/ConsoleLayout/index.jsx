@@ -14,13 +14,13 @@ export default ( props ) => (
           <ConsoleHeader />
         </Col>
         <Col
-          style={{ backgroundColor: "#c7d5f2", height: "100%", width: "180px" }}
-          md={2} xs={2} sm={2} >
+          style={{ backgroundColor: "#c7d5f2", height: "100%" }}
+          md={1} xs={2} sm={2} >
           <SideNav />
         </Col>
         <Col
           className="container"
-          md={10}
+          md={11}
           xs={10}
           sm={10} >
           <div className="main">
