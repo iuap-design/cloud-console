@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Button } from 'tinper-bee'
 
 import { IncAction, DecAction } from './action.js'
 
@@ -8,8 +9,8 @@ class List extends Component {
     return (
       <div>
         <h2> 目前共有 {this.props.listNumber} 台机器在运行中....</h2>
-        <button onClick={this.props.inc}> 增加一台机器 </button>
-        <button onClick={this.props.dec}> 减少一台机器 </button>
+        <Button colors="primary" onClick={this.props.inc}> 增加一台机器 </Button>
+        <Button colors="primary" onClick={this.props.dec}> 减少一台机器 </Button>
       </div>
     )
   }

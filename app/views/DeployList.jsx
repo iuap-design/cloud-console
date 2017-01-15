@@ -1,6 +1,7 @@
 import React from 'react'
-import {Button,InputGroup,Dropdown,FormControl} from 'tinper-bee'
+import {Button,InputGroup,Dropdown,FormControl,Table} from 'tinper-bee'
 import Menu, { Item as MenuItem, Divider, SubMenu, MenuItemGroup } from 'bee-menu';
+const { ColumnGroup, Column } = Table;
 
 function onSelect({ key }) {
     console.log(`${key} selected`);
@@ -10,6 +11,10 @@ function onSelect({ key }) {
 function onVisibleChange(visible) {
     console.log(visible);
 }
+
+const data3 = [
+  { a: {name: 'wwwwww', id: 'appid73f05062ye'}, b: '正常', c: 'wwwwww.duapp.com', d: '打包上传',e: '1 (修改)', f: '	快捷发布更多操作', key: '1' },
+];
 
 const menu1 = (
  <Menu
@@ -24,6 +29,32 @@ const menu1 = (
    <MenuItem key="6">抵/质押合同跟踪</MenuItem>
  </Menu>
 );
+
+const header1 = (
+<div className="buttons-wrap">
+    <Button size="sm" colors="primary" >+ 添加部署</Button>
+    <Button size="sm" colors="primary" >+ 部署微信公众号</Button>
+    <Button size="sm" disabled shape="border">休眠</Button>
+    <Button size="sm" disabled shape="border">开启</Button>
+    <Button size="sm" disabled shape="border">删除</Button>
+
+    <div className="buttons-right">
+        <Button size="sm" shape="border"><span className="uf uf-settings"></span></Button>
+        <Button size="sm" shape="border"><span className="uf uf-sync-c-o"></span></Button>
+    </div>
+</div>
+);
+
+const render = (text, record, index) => {
+
+  return (
+  <div>
+  <input type="checkbox" />
+  <a href="#/bae/env/detail~appid=appid73f05062ye&amp;createType=web" >{text.name}</a>
+  <span className="instance-id">{text.id}</span>
+  </div>
+  );
+};
 
 export default (props) => (
     <div>
@@ -43,7 +74,7 @@ export default (props) => (
                            animation="slide-up"
                            onVisibleChange={onVisibleChange}
                          >
-                           <Button shape="border">域名 <span className="uf uf-arrow-down"> </span></Button>
+                           <Button shape="border" style={{ lineHeight: 1 }}>域名 <span className="uf uf-arrow-down"> </span></Button>
                          </Dropdown>
                     </InputGroup.Button>
                     <FormControl type="text" />
@@ -53,58 +84,54 @@ export default (props) => (
                 </InputGroup>
             </div>
         </div>
-        <div className="buttons-wrap">
-            <Button size="sm" colors="primary" >+ 添加部署</Button>
-            <Button size="sm" colors="primary" >+ 部署微信公众号</Button>
-            <Button size="sm" disabled shape="border">休眠</Button>
-            <Button size="sm" disabled shape="border">开启</Button>
-            <Button size="sm" disabled shape="border">删除</Button>
-
-            <div className="buttons-right">
-                <Button size="sm" shape="border"><span className="uf uf-settings"></span></Button>
-                <Button size="sm" shape="border"><span className="uf uf-sync-c-o"></span></Button>
-            </div>
-        </div>
-        <div>
-            <table className="ui-table-head">
-                <tbody>
-                <tr>
-                    <th>
-                        <input type="checkbox" />
-                        名称/APPID
-                    </th>
-                    <th>状态</th>
-                    <th>域名</th>
-                    <th>代码管理方式</th>
-                    <th>资源数</th>
-                    <th>操作</th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="checkbox" />
-                        <a href="#/bae/env/detail~appid=appid73f05062ye&amp;createType=web" >wwwwww</a>
-                        <span className="instance-id">    appid73f05062ye</span>
-                    </td>
-                    <td>
-                        <span className="status normal">正常</span>
-                    </td>
-                    <td>
-                        <a target="_blank" className="app-list-copy-item" href="http://wwwwww.duapp.com">wwwwww.duapp.com</a>
-                    </td>
-                    <td>
-                        <a href="#/bae/env/option~appid=appid73f05062ye&amp;createType=web">打包上传</a>
-                    </td>
-                    <td>
-                        1
-                        <a href="#/bae/app/resource~appid=appid73f05062ye&amp;createType=web">     (修改)   </a>
-                    </td>
-                    <td>
-                        <span >快捷发布</span>
-                        <span >更多操作</span>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+        <Table data={data3} className='bordered'>
+          <ColumnGroup title={header1}>
+            <Column
+              title="名称/APPID"
+              dataIndex="a"
+              key="a"
+              width={255}
+              render={ render }
+            />
+            <Column
+              id="123"
+              title="状态"
+              dataIndex="b"
+              key="b"
+              width={255}
+            />
+            <Column
+              title="域名"
+              dataIndex="c"
+              key="c"
+              width={255}
+            />
+            <Column
+              title="代码管理方式"
+              dataIndex="d"
+              key="d"
+              width={255}
+            />
+            <Column
+              title="资源数"
+              dataIndex="e"
+              key="e"
+              width={255}
+            />
+            <Column
+              title="操作"
+              dataIndex="f"
+              key="f"
+              render={(text, record, index) => {
+                return (
+                <div>
+                    <Button size="sm" colors="info" style={{ minWidth: 50 }}>快捷发布</Button>
+                    <Button size="sm" colors="info" style={{ minWidth: 50 }}>更多操作</Button>
+                </div>
+                );
+              }}
+            />
+          </ColumnGroup>
+        </Table>
     </div>
 )
